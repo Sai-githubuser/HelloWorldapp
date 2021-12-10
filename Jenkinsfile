@@ -10,22 +10,22 @@ pipeline (
     
     stage ('Compile) {
       steps {
-       bat label: '', script: 'mvn compile'
+       bat label: '', script: 'mvnw compile'
         echo "test successful";
       }
     }
     
     stage ('Build') {
      steps {
-        bat label: '', script: 'mvn clean'
-        bat label: '', script: 'mvn package'
+        bat label: '', script: 'mvnw clean'
+        bat label: '', script: 'mvnw package'
         echo "build successful";
        }
     }
           
       stage ('Test') {
           steps{
-            bat label: '', script: 'mvn test'
+            bat label: '', script: 'mvnw test'
             echo "test successful";
           }
        }
