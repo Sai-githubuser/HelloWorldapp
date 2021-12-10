@@ -3,7 +3,7 @@ pipeline (
   stages {
      stage ('Git-Checkout') {
        steps {
-        git url: 'https://github.com/Sai-githubuser/HelloWorldapp/new/master'
+        git url: 'https://github.com/Sai-githubuser/HelloWorldapp.git'
          echo "Checkout Successful";
       }
     }
